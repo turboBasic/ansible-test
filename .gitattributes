@@ -1,0 +1,27 @@
+# Do not encrypt .gitattributes
+.gitattributes !filter !diff
+
+# Default files to be encrypted by git-crypt
+*.cert	filter=git-crypt diff=git-crypt
+*.key 	filter=git-crypt diff=git-crypt
+*.crt 	filter=git-crypt diff=git-crypt
+*.gpg 	filter=git-crypt diff=git-crypt
+
+# Ansible files
+*.yml	filter=git-crypt diff=git-crypt
+
+# Composer files
+auth.json	filter=git-crypt diff=git-crypt
+
+# VS Code files
+code/**/syncLocalSettings.json	filter=git-crypt diff=git-crypt
+
+# GnuPG files
+gnupg/**/gnupg.conf		!filter !diff
+gnupg/**/crls.d/*.*		filter=git-crypt diff=git-crypt
+gnupg/**/private-keys*/*.*	filter=git-crypt diff=git-crypt
+gnupg/**/pubring*   		filter=git-crypt diff=git-crypt
+gnupg/**/random_seed 		filter=git-crypt diff=git-crypt
+gnupg/**/trustdb.gpg 		filter=git-crypt diff=git-crypt
+gnupg/**/tofu.db   		filter=git-crypt diff=git-crypt
+
