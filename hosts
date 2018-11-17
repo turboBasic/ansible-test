@@ -1,0 +1,4 @@
+[localhost]
+127.0.0.1
+[webservers]
+d8 ansible_ssh_private_key_file=~/.ssh/id_ed25519
